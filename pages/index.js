@@ -1,36 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import HomePage from "../components/homePageCompoent/homepage";
-import SectionTwo from "../components/sectionTwoComponent/sectionTwo";
-import SectionBlack from "../components/sectionBlackComponent/sectionBlack";
-import PortFolio from "../components/portfolioComponent/homeportfolio";
-import Contact from "../components/conatctUSComponent/conatct";
-
-import { useRouter } from 'next/router';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-// Lazy load OurProcess component
-const OurProcess = React.lazy(() => import("../pages/ourProcess/index"));
+import Head from 'next/head'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
 
 export default function Home() {
-  const router = useRouter();
-  const dark = router.pathname === "/contactUs";
-  const background = router.pathname;
-  const backgroundClassname = background === "/contactUs" || "/" ? "aboutus-gradient" : "";
-
-  const white = "#070707";
-  const black = "#fffff";
-
   return (
-    <div className={`container-fluid`}>
-      <HomePage databgcolor={black} />
-      <SectionTwo databgcolor={white} />
-      <React.Suspense fallback={<div>Loading...</div>}>
-        <OurProcess />
-      </React.Suspense>
-     
-      <PortFolio />
-      <SectionBlack />
-      <Contact />
+    <div className="container">
+      <Head>
+        <title>Next.js Starter!</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        <Header title="Welcome to my app!" />
+        <p className="description">
+          Get started by editing <code>pages/index.js</code>
+        </p>
+      </main>
+
+      <Footer />
     </div>
-  );
+  )
 }

@@ -1,0 +1,38 @@
+.blue {
+    height: 120vh;
+    background-size: cover;
+    background-image: url(/assets/images/p7.jpg) ;
+    
+  }
+  .dott {
+    background: url(/assets/images/dott.png)repeat 0px 0px;
+    background-size: cover;
+  }
+  .red {
+    height: 120vh;
+    background-image: url(/assets/images/p3.jpg) ;
+    background-size: cover;
+    background-color: #eee ;
+  }
+  
+  .orange {
+    height: 120vh;
+    background-image: url(/assets/images/p4.jpg) ;
+    background-size: cover;
+    background-color: #eee ;
+  }
+  
+  .musk {
+    height: 120vh;
+    background-image: url(/assets/images/p5.jpg) ;
+    background-size: cover;
+    background-color: #eee ;
+  }
+  
+  .green {
+    height: 120vh;
+    background-image: url(/assets/images/p9.jpg) ;
+    background-size: cover;
+    background-color: #eee ;
+   
+  }
